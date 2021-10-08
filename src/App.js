@@ -1,11 +1,13 @@
 import React from "react";
 import "./style.css";
 
+import AddExpense from './components/Expenses/AddExpense'
+
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <h1>Spese utenze</h1>
+      <AddExpense />
     </div>
   );
 }
