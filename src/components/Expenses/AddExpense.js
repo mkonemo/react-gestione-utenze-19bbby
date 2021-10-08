@@ -1,14 +1,18 @@
 import React from 'react';
 
 const AddExpense = () => {
+  const addExpenseHandler = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={addExpenseHandler}>
       <label htmlFor="date">Data</label>
-      <input id="date" type="date" /> 
+      <input id="date" type="date" />
       <label htmlFor="amount">Importo (Euro)</label>
-      <input id="amount" type="number" /> 
+      <input id="amount" type="number" />
       <label htmlFor="description">Descrizione</label>
-      <input id="description" type="text" />      
+      <input id="description" type="text" />
       <label htmlFor="category">Categoria</label>
       <input id="category" type="text" />
       <label htmlFor="paid">Pagato</label>
