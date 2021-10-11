@@ -1,11 +1,14 @@
 import React from 'react';
 
+import Card from '../UI/Card';
+
 const AddExpense = () => {
   const addExpenseHandler = (event) => {
     event.preventDefault();
   };
 
   return (
+<Card>
     <form onSubmit={addExpenseHandler}>
       <label htmlFor="date">Data</label>
       <input id="date" type="date" />
@@ -19,6 +22,7 @@ const AddExpense = () => {
       <input id="paid" type="checkbox" />
       <button type="submit">Aggiungi spesa</button>
     </form>
+    </Card>
   );
 };
 
