@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Card from '../UI/Card';
+import Button from '../UI/Button';
 
 import classes from './AddExpense.module.css';
 
@@ -22,7 +23,7 @@ const AddExpense = () => {
         <input id="category" type="text" />
         <label htmlFor="paid">Pagato</label>
         <input id="paid" type="checkbox" />
-        <button type="submit">Aggiungi spesa</button>
+        <Button type="submit">Aggiungi spesa</Button>
       </form>
     </Card>
   );
