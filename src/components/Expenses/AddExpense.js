@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Card from '../UI/Card';
 import Button from '../UI/Button';
@@ -6,6 +6,13 @@ import Button from '../UI/Button';
 import classes from './AddExpense.module.css';
 
 const AddExpense = () => {
+
+const [enteredDate, setEnteredDate] = useState('');
+const [enteredAmount, setEnteredAmount] = useState('');
+const [enteredDescription, setEnteredDescription] = useState('');
+const [enteredCategory, setEnteredCategory] = useState('');
+const [checkedPaid, setCheckedPaid] = useState('false');
+
   const addExpenseHandler = (event) => {
     event.preventDefault();
   };
