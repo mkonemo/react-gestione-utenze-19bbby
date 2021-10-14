@@ -1,6 +1,7 @@
 :root {
-  --button: #4f005f;
-  --button-hover: #741188;
+  --color1: 51, 73, 96;
+  --button: rgb(var(--color1));
+  --button-hover: rgba(var(--color1),.9);
 }
 
 .button {
