@@ -10,11 +10,22 @@ const AddExpense = () => {
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDescription, setEnteredDescription] = useState('');
   const [enteredCategory, setEnteredCategory] = useState('');
-  const [checkedPaid, setCheckedPaid] = useState('false');
+  const [checkedPaid, setCheckedPaid] = useState(false);
 
   const addExpenseHandler = (event) => {
-    event.preventDefault( );
-    console.log(enteredDate, enteredAmount, enteredDescription, enteredCategory, checkedPaid)
+    event.preventDefault();
+    console.log(
+      enteredDate,
+      enteredAmount,
+      enteredDescription,
+      enteredCategory,
+      checkedPaid
+    );
+    setEnteredDate('');
+    setEnteredAmount('');
+    setEnteredDescription('');
+    setEnteredCategory('');
+    setCheckedPaid(false);
   };
 
   const dateChangeHandler = (event) => {
@@ -23,19 +34,19 @@ const AddExpense = () => {
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-  }
+  };
 
   const descriptionChangeHandler = (event) => {
     setEnteredDescription(event.target.value);
-  }
+  };
 
   const categoryChangeHandler = (event) => {
     setEnteredCategory(event.target.value);
-  } 
+  };
 
   const paidCangeHandler = (event) => {
-    setCheckedPaid(event.target.value);
-  }
+    setCheckedPaid(!checkedPaid);
+  };
 
   return (
     <Card className={classes.input}>
@@ -73,7 +84,7 @@ const AddExpense = () => {
           id="paid"
           type="checkbox"
           value={checkedPaid}
-          onChange={paidCangeHandler}
+          onClick={paidCangeHandler}
         />
         <Button type="submit">Aggiungi spesa</Button>
       </form>
