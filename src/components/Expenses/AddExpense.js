@@ -33,6 +33,7 @@ const AddExpense = () => {
     setEnteredDescription('');
     setEnteredCategory('');
     setCheckedPaid(false);
+    setErroMessage('');
   };
 
   const dateChangeHandler = (event) => {
