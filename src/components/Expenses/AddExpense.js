@@ -16,7 +16,7 @@ const AddExpense = () => {
   const addExpenseHandler = (event) => {
     event.preventDefault();
 
-    if (enteredDate.trim().length===0 || enteredAmount.trim().length===0 || enteredDescription.trim().length===0 || setEnteredCategory.trim().length===0 ) {
+    if (enteredDate.trim().length===0 || enteredAmount.trim().length===0 || enteredDescription.trim().length===0 || enteredCategory.trim().length===0 ) {
       setErroMessage('I valori inseriti non sono validi');
       return;
       
