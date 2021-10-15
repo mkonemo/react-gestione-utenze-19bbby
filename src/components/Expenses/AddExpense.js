@@ -11,9 +11,16 @@ const AddExpense = () => {
   const [enteredDescription, setEnteredDescription] = useState('');
   const [enteredCategory, setEnteredCategory] = useState('');
   const [checkedPaid, setCheckedPaid] = useState(false);
+  const [errorMessage, setErroMessage] = useState('');
 
   const addExpenseHandler = (event) => {
     event.preventDefault();
+
+    if (enteredDate.trim().length===0 || enteredAmount.trim().length===0 || enteredDescription.trim().length===0 || setEnteredCategory.trim().length===0 ) {
+      setErroMessage('I valori inseriti non sono validi');
+      return;
+      
+    }
     console.log(
       enteredDate,
       enteredAmount,
@@ -88,6 +95,7 @@ const AddExpense = () => {
         />
         <Button type="submit">Aggiungi spesa</Button>
       </form>
+      <p className="error-message">{errorMessage}</p> 
     </Card>
   );
 };
