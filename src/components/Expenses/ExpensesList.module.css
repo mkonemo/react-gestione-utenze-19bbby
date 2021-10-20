@@ -4,13 +4,20 @@
   max-width: 40rem;
 }
 
-.expenses table {
-  list-style: none;
-  padding: 1rem;
+.expense {
+  display: flex;
+  flex-direction: row;
+  padding: .5rem 1rem 0 ;
+  margin: 0 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
-.expenses tr {
-  border-bottom: 1px solid #ccc;
-  margin: 0.5rem 0;
+.expense div {
+  flex: 1;
+  
   padding: 0.5rem;
+}
+
+.expense:last-child {
+  border-bottom: 0;
 }
