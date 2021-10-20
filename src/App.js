@@ -7,9 +7,17 @@ import ExpensesList from './components/Expenses/ExpensesList';
 function App() {
   const [expensesList, setExpensesList] = useState([]);
 
-  const addExpenseHandler = (eDate, eDescription) => {
+  const addExpenseHandler = (eDate, eAmount, eDescription, eCategory) => {
     setExpensesList((prevExpensesList) => {
-      return [...prevExpensesList, { date: eDate, description: eDescription }];
+      return [
+        ...prevExpensesList,
+        {
+          date: eDate,
+          amount: eAmount,
+          description: eDescription,
+          category: eCategory,
+        },
+      ];
     });
   };
 

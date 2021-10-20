@@ -7,15 +7,17 @@ import classes from './ExpensesList.module.css';
 const ExpensesList = (props) => {
   return (
     <Card className={classes.expenses}>
-      <ul>
+      <table width="100%">
         {props.expenses.map((expense) => (
-          <li key={expense.id}>
-            {expense.date} {expense.description}
-          </li>
+          <tr key={expense.id}>
+            <td>{expense.date}</td>
+            <td>{expense.amount}€</td> <td>{expense.description}</td>
+            <td>{expense.category}</td>
+          </tr>
         ))}
-      </ul>
+      </table>
     </Card>
   );
-}
+};
 
 export default ExpensesList;
