@@ -22,11 +22,11 @@ function App() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <h1>Spese utenze</h1>
       <AddExpense onAddExpense={addExpenseHandler} />
       <ExpensesList expenses={expensesList}></ExpensesList>
-    </div>
+    </React.Fragment>
   );
 }
 
