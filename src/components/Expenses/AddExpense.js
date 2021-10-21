@@ -33,7 +33,7 @@ const AddExpense = (props) => {
       checkedPaid
     );
     props.onAddExpense(
-      enteredDate,
+      new Date(enteredDate),
       enteredAmount,
       enteredDescription,
       enteredCategory
@@ -47,7 +47,7 @@ const AddExpense = (props) => {
   };
 
   const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
+    setEnteredDate(event.target.value.toLocaleString('it-IT', { timeZone: 'UTC' }));
   };
 
   const amountChangeHandler = (event) => {
